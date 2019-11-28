@@ -1,0 +1,11 @@
+.env
+/venv
+.vscode
+/.idea
+*.sqlite3
+__pycache__/
+*.py[cod]
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

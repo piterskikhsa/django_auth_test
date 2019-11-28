@@ -1,0 +1,242 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+  }
+  html { 
+      height: 100%;
+      box-sizing: border-box;
+    } /* always display scrollbars */
+  body { font-size: 62.5%; line-height: 1; font-family: 'Roboto', Arial, Tahoma, Verdana, sans-serif; }
+
+  *, *:after, *:before {
+      box-sizing: inherit;
+  }
+  
+  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+  ol, ul { list-style: none; }
+  
+  blockquote, q { quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+  strong { font-weight: bold; } 
+  
+  input { outline: none; }
+  
+  table { border-collapse: collapse; border-spacing: 0; }
+  img { border: 0; max-width: 100%; }
+  
+  a { text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .separate {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    
+  }
+  .separate::before, .separate::after {
+    width: 45%;
+    content: '';
+    height: 1px;
+    background-color: #b3b3b3;
+    position: absolute;
+  }
+  .separate::before {
+      left: 0;
+      top: 50%;
+  }
+  .separate::after {
+      right: 0;
+      top: 50%;
+  }
+.input-icon {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    filter: invert(40%);
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.warning {
+    box-shadow: 0 0 1px 2px  #9b0606
+}
+.success {
+    box-shadow: 0 0 1px 2px  #024b02
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+}
+.social__item {
+    position: relative;
+    display: flex;
+    align-items:center;
+}
+.social__link {
+    text-transform: uppercase;
+}
+.social__icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+}
+
+.checkin {
+    background: url('../img/bg.png') no-repeat center;
+    background-size: cover;
+    background-color: #308ae2;
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.checkin-form {
+    padding-bottom: 14px;
+}
+.checkin-form__title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.checkin-form__wrapper {
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px 20px;
+    width: 20%;
+    min-width: 310px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 2px 6px 10px #364b67;
+}
+
+.checkin-form__group { 
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.checkin-form__input {
+    width: 100%;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    padding: 10px 16px;
+    padding-left: 50px;
+}
+.checkin-form__input:focus ~ .checkin-form__label, .checkin-form__input:valid ~ .checkin-form__label {
+    opacity: 0;
+    pointer-events: none;
+}
+.checkin-form__input[type='email']:not(:placeholder-shown) ~ .checkin-form__label, 
+.checkin-form__input[type='password']:not(:placeholder-shown) ~ .checkin-form__label {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkin-form__label {
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #b3b3b3;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s;
+    pointer-events: 1;
+}
+
+.checkin-form__input[type='checkbox'] {
+    display: none;
+}
+
+.checkin-form__input[type='checkbox'] ~ .checkin-form__text::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 1px 4px 1px #dbdadb
+}
+
+.checkin-form__input[type='checkbox'] ~ .checkin-form__text::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 9px;
+    left: 3px;
+    top: 7px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    color: #01ab53;
+    transform: rotate(-45deg);
+}
+.checkin-form__input[type='checkbox'] ~ .checkin-form__text::after {
+    content: none;
+}
+.checkin-form__input[type='checkbox']:checked ~ .checkin-form__text::after {
+    content: "";
+}
+
+
+
+.checkin-form__btn {
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    display: block;
+    color: #fff;
+    padding: 16px 24px;
+    background-color: #01ab53;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+.checkin-form__text {
+    position: relative;
+    font-size: 12px;
+    padding: 4px 4px 4px 20px;
+    margin-bottom: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.checkin-form__text-small {
+    color: #8c8c8c;
+    font-size: 10px;
+}
+
+.checkin-form__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkin a {
+    color: #196d9c;
+}
+.checkin a:visited {
+    color: #196d9c;
+}
+.btn {
+    text-transform: uppercase;
+    border: 1px solid #196d9c;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 8px 16px;
+    font-weight: 700;
+}
