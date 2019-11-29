@@ -17,7 +17,7 @@ def sign_up(request):
             return redirect('simple_app:index')
     else:
         form = SingUpForm()
-    return render(request, 'signup-page.html', {'form': form})
+    return render(request, 'registration/signup-page.html', {'form': form})
 
 
 @login_required(login_url='simple_app:sign_up')

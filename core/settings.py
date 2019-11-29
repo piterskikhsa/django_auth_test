@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'some_key')
 
 DEBUG = os.getenv('DEBUG', False)
 
-SITE_HOST = os.getenv('SITE_HOST', '')
+SITE_HOST = os.getenv('SITE_HOST', 'localhost')
 
 ALLOWED_HOSTS = [SITE_HOST]
 

@@ -3,9 +3,11 @@
 {% block title %}Home page{% endblock %}
 
 {% block content %}
-    <section>
-    <h1>Home page</h1>
-    <p>{{ user.last_name }} {{ user.first_name }}</p>
-        <a href="{% url 'simple_app:logout' %}"> logout</a>
+    <section class="content">
+        <div class="content__wrapper">
+            <h1>Home page</h1>
+            <p>{{ user.last_name }} {{ user.first_name }}</p>
+            <a href="{% url 'simple_app:logout' %}"> logout</a>
+        </div>
     </section>
 {% endblock %}
