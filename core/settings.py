@@ -11,7 +11,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'some_key')
 
 DEBUG = os.getenv('DEBUG', False)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'django-venv.yh8c2pj2m8.eu-central-1.elasticbeanstalk.com']
+SITE_HOST = os.getenv('SITE_HOST', '')
+
+ALLOWED_HOSTS = [SITE_HOST]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
